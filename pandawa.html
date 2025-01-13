@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destina 6</title>
+    <link rel="icon" href="destina6.ico" type="image/x-icon">
+    <link rel="stylesheet" href="gaya.css">
+</head>
+<body id="animated-background">
+    <header>
+        <a href="#" class="logo">DESTINA 6</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="sign.html">Sign In</a></li>
+            </ul>
+        <!-- <div class="navbar">
+            <h1 class="logo">DESTINA 6</h1>
+            <nav>
+                <ul>
+                    <li><a href="apa.php">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="sign-in">Sign in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+    </header>
+
+    <script src="tab.js"></script>
+	<script src="searchh.js"></script>
+	<script src="searchf.js"></script>
+	<script src="background-animation.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);    
+        })
+    </script>
+</body>
+</html>

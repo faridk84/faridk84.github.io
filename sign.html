@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Destina 6</title>
+    <link rel="stylesheet" href="style-sign.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Gambar Pemandangan -->
+        <div class="image-section"></div>
+
+        <!-- Form Login -->
+        <div class="form-section">
+            <button onclick="window.location.href='home.html';" class="back-home-button">Back to Home</button>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="button">Login</button>
+            </form>
+
+            <div class="link">
+                <a href="forgot.html" onclick="forgotPassword()">Forgot Password?</a>
+                <br>
+                <a href="create.html" onclick="createAccount()">Create New Account</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Destina 6">
+	<meta name="description" content="Destina 6 Forgot Password Page">
+	<meta name="keywords" content="forgot password page, basic html and css">
+    <link href="forgot.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="acc.css" rel="stylesheet" type="text/css" media="all" />
+	<title>Forgot Password Destina 6</title>
+</head>
+<body>
+    <div class="main-w3layouts wrapper">
+        <h1><strong>Destina 6 SignUp Form</strong></h1>
+    </div>
+	<div class="row">
+		
+		<h6 class="information-text">Enter your registered email to reset your password.</h6>
+		<div class="form-group">
+			<input type="email" name="user_email" id="user_email">
+			<p><label for="username">Email</label></p>
+			<button onclick="showSpinner()">Reset Password</button>
+		</div>
+		<div class="footer">
+			<h5>New here? <a href="create.html">Sign Up.</a></h5>
+			<h5>Already have an account? <a href="sign.html">Sign In.</a></h5>
+			<p class="information-text"><span class="symbols" title="Destina 6">&copy; </span><a href="https://id.linkedin.com/in/farid-kurniatama-8894bb1ba" target="_blank" title="Destina 6"></a>Copyright Destina 6</p>
+		</div>
+	</div>
+</div>
+<script>
+    function showSpinner() {
+        var email = document.getElementById('user_email').value;
+
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (emailPattern.test(email)) {
+            alert("Kode verifikasi telah dikirimkan ke email.");
+        } else {
+            alert("Masukkan email yang valid.");
+        }
+    }
+</script>
+</body>

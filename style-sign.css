@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Container untuk seluruh halaman */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Gambar pemandangan 3/4 layar di kiri */
+.image-section {
+    flex: 3; /* Gambar mengambil 3/4 dari lebar layar */
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Left section */
+    transition: background-image 1s ease-in-out;
+}
+
+/* Form login di kanan 1/4 layar */
+.form-section {
+    flex: 1; /* Form mengambil 1/4 dari lebar layar */
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Right section */
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading of the form */
+.form-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styling */
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+
+.back-home-button {
+    position: absolute;
+    top: 10px; /* Posisikan tombol di bawah */
+    left: 50%;
+    transform: translateX(30%); /* Posisikan tombol di tengah */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-home-button:hover {
+    background-color: #555;
+}

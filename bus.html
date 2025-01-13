@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destina 6</title>
+    <link rel="icon" href="destina6.ico" type="image/x-icon">
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Hero section */
+        .hero {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        /* bus container */
+        .bus-container {
+            background-color: #f0f0f0; /* Light grey background for the container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center all child elements horizontally */
+        }
+
+        /* bus name centered */
+        #bus-name {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px; /* Add space below the bus name */
+        }
+
+        /* bus form */
+        .bus-form {
+            padding: 20px;
+            display: flex;
+            flex-direction: row; /* Arrange image and form side by side */
+            align-items: flex-start; /* Align items to the start */
+            gap: 100px; /* Space between image and form */
+            width: 90%;
+            justify-content: center;
+        }
+
+        .bus-form p {
+            color: black;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .bus-form h2 {
+            color: black;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        /* Left column (bus image) */
+        .bus-form img {
+            object-fit: cover;
+            width: 40%; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        /* Form and inputs */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack input elements vertically */
+            align-items: center;
+            gap: 10px; /* Space between the inputs */
+        }
+
+        /* Time inputs container */
+        .time-inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+        }
+
+        input[type="datetime-local"] {
+            width: 100%; /* Adjust width for two columns */
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* bus location */
+        #bus-location {
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Confirm button */
+        .confirm-booking-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .confirm-booking-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body id="animated-background">
+    <header>
+        <a href="home.html" class="logo">DESTINA 6</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="sign.html">Sign In</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <div class="bus-container">
+            <h2 id="bus-name">Terminal Name</h2>
+            <div class="bus-form">
+                <img id="bus-image" src="" alt="bus Image">
+                <form>
+                    <label>Destination:</label><h2 id="bus-location">Airport Name</h2>
+                    <input class="form-control" type="datetime-local" placeholder="Select Start Time">
+                    <label>From:</label>
+                    <select name="bus-terminal" id="bus-terminal-dropdown">
+                        <option value="">Select a bus terminal</option>
+                        <!-- Terminal di Pulau Jawa -->
+                        <option value="Jakarta - Terminal Pulo Gebang">Jakarta - Terminal Pulo Gebang</option>
+                        <option value="Jakarta - Terminal Kampung Rambutan">Jakarta - Terminal Kampung Rambutan</option>
+                        <option value="Bandung - Terminal Leuwi Panjang">Bandung - Terminal Leuwi Panjang</option>
+                        <option value="Bandung - Terminal Cicaheum">Bandung - Terminal Cicaheum</option>
+                        <option value="Semarang - Terminal Mangkang">Semarang - Terminal Mangkang</option>
+                        <option value="Yogyakarta - Terminal Giwangan">Yogyakarta - Terminal Giwangan</option>
+                        <option value="Surabaya - Terminal Bungurasih">Surabaya - Terminal Bungurasih</option>
+                        <option value="Malang - Terminal Arjosari">Malang - Terminal Arjosari</option>
+                        <option value="Solo - Terminal Tirtonadi">Solo - Terminal Tirtonadi</option>
+                        <option value="Cirebon - Terminal Harjamukti">Cirebon - Terminal Harjamukti</option>
+                    
+                        <!-- Terminal di Sumatera -->
+                        <option value="Medan - Terminal Amplas">Medan - Terminal Amplas</option>
+                        <option value="Medan - Terminal Pinang Baris">Medan - Terminal Pinang Baris</option>
+                        <option value="Padang - Terminal Anak Air">Padang - Terminal Anak Air</option>
+                        <option value="Palembang - Terminal Karya Jaya">Palembang - Terminal Karya Jaya</option>
+                        <option value="Lampung - Terminal Rajabasa">Lampung - Terminal Rajabasa</option>
+                        <option value="Pekanbaru - Terminal Bandar Raya Payung Sekaki">Pekanbaru - Terminal Bandar Raya Payung Sekaki</option>
+                    
+                        <!-- Terminal di Kalimantan -->
+                        <option value="Banjarmasin - Terminal Induk KM 6">Banjarmasin - Terminal Induk KM 6</option>
+                        <option value="Pontianak - Terminal Batu Layang">Pontianak - Terminal Batu Layang</option>
+                        <option value="Balikpapan - Terminal Batu Ampar">Balikpapan - Terminal Batu Ampar</option>
+                        <option value="Samarinda - Terminal Sungai Kunjang">Samarinda - Terminal Sungai Kunjang</option>
+                    
+                        <!-- Terminal di Sulawesi -->
+                        <option value="Makassar - Terminal Daya">Makassar - Terminal Daya</option>
+                        <option value="Manado - Terminal Malalayang">Manado - Terminal Malalayang</option>
+                        <option value="Kendari - Terminal Baruga">Kendari - Terminal Baruga</option>
+                    
+                        <!-- Terminal di Bali dan Nusa Tenggara -->
+                        <option value="Badung - Terminal Mengwi">Badung - Terminal Mengwi</option>
+                        <option value="Denpasar - Terminal Ubung">Denpasar - Terminal Ubung</option>
+                        <option value="Mataram - Terminal Mandalika">Mataram - Terminal Mandalika</option>
+                        <option value="Kupang - Terminal Oebobo">Kupang - Terminal Oebobo</option>
+                    
+                        <!-- Terminal di Papua -->
+                        <option value="Jayapura - Terminal Entrop">Jayapura - Terminal Entrop</option>
+                        <option value="Sorong - Terminal Remu">Sorong - Terminal Remu</option>
+                    </select>
+                              
+                        <!-- Dropdown for bus class -->
+                    <label for="class-dropdown">Select Class:</label>
+                    <select id="class-dropdown">
+                        <option value="">Select class</option>
+                        <option value="economy">Economy Class</option>
+                        <option value="business">Business Class</option>
+                        <option value="executive">Executive Class</option>
+                    </select>
+
+                    <!-- Display Price Result -->
+                    <p id="bus-price">Price:</p><div id="price-result" class="result"></div>
+                    <button class="confirm-booking-btn" type="button">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br></br>	
+    <footer class="footer">
+        <p>&copy; 2025 Destina 6. All rights reserved.</p>
+    </footer>  
+    <script src="tab.js"></script>
+    <script src="searchh.js"></script>
+    <script src="searchf.js"></script>
+    <script src="background-animation.js"></script>
+
+    <script type="text/javascript">
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                name: urlParams.get('data-name'),
+                img: urlParams.get('img'),
+                location: urlParams.get('location')
+            };
+        }
+
+        // Display bus data based on URL parameters
+        function displaybusDetails() {
+            const params = getQueryParams();
+            if (params.name && params.img && params.location) {
+                document.getElementById('bus-name').textContent = params.name;
+                document.getElementById('bus-image').src = params.img;
+                document.getElementById('bus-location').textContent = params.name+" "+params.location;
+            } else {
+                document.getElementById('bus-name').textContent = "bus not found.";
+            }
+        }
+
+        // Call the function to display the bus details
+        displaybusDetails();
+
+        // Sticky header on scroll
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);    
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        config = {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        }
+        flatpickr("input[type=datetime-local]", {}); 
+    </script> 
+    <script>
+    // Function to dynamically load a script
+    function loadScript(scriptName) {
+        const script = document.createElement('script');
+        script.src = `js/${scriptName}.js`;
+        script.type = 'text/javascript';
+        document.head.appendChild(script);
+    }
+
+    // Get the 'airport' URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const terminal = urlParams.get('data-name'); // Example: ?bus=ngurah
+
+    // Dynamically load the script based on the 'terminal'' parameter
+    if (terminal) {
+        console.log(terminal);
+        switch (terminal) {
+            case 'Terminal Mengwi':
+                loadScript('bali');
+                break;
+            case 'Terminal Cicaheum':
+                loadScript('bandung');
+                break;
+            case 'Jakarta':
+                loadScript('jakarta');
+                break;
+            default:
+                console.log('Unknown terminal');
+                break;
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destina 6</title>
+    <link rel="stylesheet" href="gaya.css">
+</head>
+<body id="animated-background">
+    <header>
+        <a href="home.html" class="logo">DESTINA 6</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="sign.html">Sign In</a></li>
+        </ul>
+        <!-- <div class="navbar">
+            <h1 class="logo">DESTINA 6</h1>
+            <nav>
+                <ul>
+                    <li><a href="apa.php">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="sign-in">Sign in</a></li>
+                </ul>
+            </nav>
+        </div>-->
+    </header>
+        <div class="hero">
+            <h2>START YOUR TRIP with DESTINA6</h2>
+
+            
+
+
+            <!-- Bagian Tab -->
+            <div class="search-and-tabs">
+				<div class="tab-container">
+					<div class="tabs">
+						<button class="tab" data-target="destinations">Destinations</button>
+						<button class="tab" data-target="hotels">Hotels</button>
+						<button class="tab" data-target="flights">Flights</button>
+						<button class="tab" data-target="bus">Bus</button>
+					</div>
+					<div class="tab-content">
+						<!-- Content Destinations -->
+						<div class="content" id="destinations">
+							<!-- Filter Content -->
+							<div class="filter-container">
+								<div class="filter-section">
+									<label for="destination-filter">Filter:</label>
+									<select id="destination-filter">
+										<option value="all">All</option>
+										<option value="mountain">Mountain</option>
+										<option value="beach">Beach</option>
+										<option value="tourism">Tourism</option>
+									</select>
+								</div>
+								<div class="filter-results">
+									<div class="result-list" id="destination-list">
+										<!-- Hasil filter akan muncul di sini -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Content Hotels -->
+						<div class="content" id="hotels">
+                        <div class="hotel-container">
+						<div class="search-section">
+							<form class="search-form">
+								<input type="text" placeholder="Input location here..." />
+								<button class="search-button" type="submit">Search</button>
+							</form>
+						</div>
+                        <div class="hotel-item" data-name="Neo+ Kuta Legian Bali">
+                            <img src="photos/hotel/neo.jpg" alt="Neo+ Kuta Legian Bali">
+                            <div class="hotel-details">
+                                <h4>Neo+ Kuta Legian</h4>
+                                <p>Discover modern comfort and convenience, just steps from vibrant Legian Street and minutes from Kuta Beach.</p>
+                                <a href="hotel.html?data-name=Neo+Kuta+Legian+Bali&img=photos/hotel/neo.jpg&location=Bali" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="The 101 Bali Fontana">
+                            <img src="photos/hotel/the101.jpg" alt="The 101 Bali Fontana">
+                            <div class="hotel-details">
+                                <h4>The 101 Bali Fontana</h4>
+                                <p>Experience contemporary elegance and urban charm, offering stylish accommodations and a tranquil spa in the heart of Kuta.</p>
+                                <a href="hotel.html?data-name=The+101+Bali+Fontana&img=photos/hotel/the101.jpg&location=Bali" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Swiss Bell Hotel Bogor">
+                            <img src="photos/hotel/swiss.jpeg" alt="Swiss Bell Hotel Bogor">
+                            <div class="hotel-details">
+                                <h4>Swiss Bell Hotel Bogor</h4>
+                                <p>Located in the heart of Bogor, this hotel offers luxurious accommodations and excellent service.</p>
+                                <a href="hotel.html?data-name=Swiss+Bell+Hotel+Bogor&img=photos/hotel/swiss.jpeg&location=Bogor" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Trans Luxury Hotel Bandung">
+                            <img src="photos/hotel/trans.jpg" alt="Trans Luxury Hotel Bandung">
+                            <div class="hotel-details">
+                                <h4>Trans Luxury Hotel Bandung</h4>
+                                <p>Experience unparalleled luxury and hospitality in the vibrant city of Bandung.</p>
+                                <a href="hotel.html?data-name=Trans+Luxury+Hotel+Bandung&img=photos/hotel/trans.jpg&location=Bandung" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Aston Bogor Hotel">
+                            <img src="photos/hotel/aston.jpg" alt="Aston Bogor Hotel">
+                            <div class="hotel-details">
+                                <h4>Aston Bogor Hotel</h4>
+                                <p>Enjoy serene surroundings and modern facilities in this top-rated hotel in Bogor.</p>
+                                <a href="hotel.html?data-name=Aston+Bogor+Hotel&img=photos/hotel/aston.jpg&location=Bogor" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Hotel Jayakarta Bandung">
+                            <img src="photos/hotel/jayakarta.png" alt="Hotel Jayakarta Bandung">
+                            <div class="hotel-details">
+                                <h4>Hotel Jayakarta Bandung</h4>
+                                <p>A perfect blend of tradition and modernity in the heart of Bandung.</p>
+                                <a href="hotel.html?data-name=Hotel+Jayakarta+Bandung&img=photos/hotel/jayakarta.png&location=Bandung" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Hotel Ciputra Jakarta">
+                            <img src="photos/hotel/ciputra.jpg" alt="Hotel Ciputra Jakarta">
+                            <div class="hotel-details">
+                                <h4>Hotel Ciputra Jakarta</h4>
+                                <p>A convenient and comfortable stay with easy access to Jakarta's main attractions.</p>
+                                <a href="hotel.html?data-name=Hotel+Ciputra+Jakarta&img=photos/hotel/ciputra.jpg&location=Jakarta" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="hotel-item" data-name="Aryaduta Hotel Jakarta">
+                            <img src="photos/hotel/aryaduta.jpg" alt="Aryaduta Hotel Jakarta">
+                            <div class="hotel-details">
+                                <h4>Aryaduta Jakarta</h4>
+                                <p>Classic luxury and impeccable service await you in this iconic Jakarta hotel.</p>
+                                <a href="hotel.html?data-name=Aryaduta+Hotel+Jakarta&img=photos/hotel/aryaduta.jpg&location=Jakarta" class="book-now-button">Book Now</a>
+                            </div>
+                        </div>
+                        
+						</div>
+                    </div>
+							<!-- Hotel Content -->
+						<!-- Content Flights -->
+                        <!-- Content Flights -->
+                    <div class="content" id="flights">
+                    <div class="flight-container">
+                    <div class="search-section">
+                    <form class="search-form">
+                        <input type="text" placeholder="Search airport here..." />
+                        <button class="search-button" type="submit">Search</button>
+                    </form>
+                    </div>
+                        <div class="flight-item" data-name="Bandara Ngurah Rai">
+                            <img src="photos/flight/ngurah.jpeg" alt="Bandara Ngurah Rai">
+                            <div class="flight-details">
+                            <h4>Bandara Ngurah Rai</h4>
+                            <p>The gateway to Bali, offering excellent facilities and direct access to popular destinations.</p>
+                            <a href="flight/ngurah.html" class="book-now-button">Book Now</a>
+                        </div>
+                    </div>
+                        <div class="flight-item" data-name="Bandara Halim Perdanakusuma">
+                            <img src="photos/flight/halim.jpg" alt="Bandara Halim Perdanakusuma">
+                            <div class="flight-details">
+                            <h4>Bandara Halim Perdanakusuma</h4>
+                            <p>A convenient airport for domestic travel, located in the heart of Jakarta.</p>
+                            <a href="flight/halim.html" class="book-now-button">Book Now</a>
+                        </div>
+    </div>
+    <div class="flight-item" data-name="Bandara Kertajati">
+        <img src="photos/flight/kertajati.jpeg" alt="Bandara Kertajati">
+        <div class="flight-details">
+            <h4>Bandara Kertajati</h4>
+            <p>Modern and spacious, this airport serves as a hub for West Java.</p>
+            <a href="flight/kertajati.html" class="book-now-button">Book Now</a>
+        </div>
+    </div>
+    <div class="flight-item" data-name="Bandara Nusawiru">
+        <img src="photos/flight/nusawiru.png" alt="Bandara Nusawiru">
+        <div class="flight-details">
+            <h4>Bandara Nusawiru</h4>
+            <p>A small but efficient airport, offering convenient connections to nearby islands.</p>
+            <a href="flight/nusawiru.html" class="book-now-button">Book Now</a>
+        </div>
+    </div>
+    <div class="flight-item" data-name="Bandara Soekarno-Hatta">
+        <img src="photos/flight/soehat.jpg" alt="Bandara Soekarno-Hatta">
+        <div class="flight-details">
+            <h4>Bandara Soekarno-Hatta</h4>
+            <p>Indonesia's main international gateway, serving millions of passengers annually.</p>
+            <a href="flight/soehat.html" class="book-now-button">Book Now</a>
+        </div>
+    </div>
+    <div class="flight-item" data-name="Bandara Wiriadinata">
+        <img src="photos/flight/wiriadinata.jpg" alt="Bandara Wiriadinata">
+        <div class="flight-details">
+            <h4>Bandara Wiriadinata</h4>
+            <p>Located in Tasikmalaya, offering easy access to the surrounding region.</p>
+            <a href="flight/wiriadinata.html" class="book-now-button">Book Now</a>
+        </div>
+    </div>
+</div>
+</div>
+						<!-- Content Bus -->
+						<div class="content" id="bus">
+							<!-- Bus Content -->
+                            <div class="bus-container">
+                                <div class="bus-item" data-name="Bali">
+                                    <img src="photos/bus/bali.jpg" alt="Bali">
+                                    <div class="bus-details">
+                                        <h4>Bali</h4>
+                                        <p>Provides convenient transportation for both locals and tourists, connecting key destinations across the island while offering scenic views along the way.</p>
+                                        <a href="bus/bali.html" class="book-now-button">Book Now</a>
+                                    </div>
+                                </div>
+                                <div class="bus-item" data-name="Bandung">
+                                    <img src="photos/bus/bandung.jpg" alt="Bandung">
+                                    <div class="bus-details">
+                                        <h4>Bandung</h4>
+                                        <p>Bustling transportation hub connecting the city to various destinations across Indonesia, serving thousands of passengers daily.</p>
+                                        <a href="bus/bandung.html" class="book-now-button">Book Now</a>
+                                    </div>
+                                </div>
+                                <div class="bus-item" data-name="Jakarta">
+                                    <img src="photos/bus/jakarta.jpg" alt="Jakarta">
+                                    <div class="bus-details">
+                                        <h4>Jakarta</h4>
+                                        <p>Vital public transportation network that efficiently connects the city's diverse districts, catering to the daily commute of millions of passengers.</p>
+                                        <a href="bus/jakarta.html" class="book-now-button">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+                <!-- Bagian Recommended -->
+                <div class="recommended-section" id="recommended">
+                <div class="recommended-container">
+                    <div class="recommended-item">
+                    <h1>RECOMMENDED</h1>
+                    <h3>Popular Beach in Indonesia</h3>
+                    <br></br>
+                    <h2>PANDAWA BEACH</h2>
+                    <p>Pandawa Beach is one of the popular natural tourist destinations located in Bali Province. Visiting tourists will be greeted by a panoramic view that spoils the eyes plus a calm and typical atmosphere of the Island of the Gods. The name of the beach located in Kutuh Village, South Kuta District, Badung Regency is taken from the five Mahabharata brothers consisting of Yudistira, Bima, Arjuna, Sahadewa, and Nakula.</p>
+                    <br></br>
+                    <a href="destination.html?data-name=Pandawa+Beach&img=photos/beach/pandawa.jpg&location=Bali&description=Escape to Pandawa Beach, Bali’s hidden gem, where tranquility meets natural beauty. Nestled on the southern coast, this serene paradise blends history, stunning landscapes, and peaceful vibes. Drive through towering limestone cliffs, past statues of the Pandawa brothers from the Mahabharata, and arrive at this secluded haven.
+                    Feel the soft sands beneath you as you relax by the crystal-clear waters, or take a peaceful kayak ride. Unlike Bali’s crowded beaches, Pandawa offers a quiet retreat, framed by dramatic cliffs. Enjoy local delicacies at beachside warungs, with the soothing sound of waves in the background.
+                    Discover Pandawa Beach—your peaceful escape in Bali." class="button">Explore now</a>
+                </div>
+                <div class="recommended-image">
+                    <img src="pandawa.jpg" alt="Pandawa Beach">
+                </div>
+            </div>
+        </div>
+        <h2>We Offer  Best Services</h2>
+        </div>
+            <div class="features-container">
+            <div class="feature-box">
+                <img src="icons/paperplane.gif" alt="Fast Loading" class="feature-icon">
+                <h3>Fast Loading</h3>
+                <p>Our website loads quickly to save your time and enhance your experience.</p>
+            </div>
+            <div class="feature-box">
+                <img src="icons/ok.gif" alt="Responsive Design" class="feature-icon">
+                <h3>Responsive Design</h3>
+                <p>Optimized for all devices, ensuring seamless navigation on any screen size.</p>
+            </div>
+            <div class="feature-box">
+                <img src="icons/handshake.gif" alt="Secure Data" class="feature-icon">
+                <h3>Secure Data</h3>
+                <p>Advanced security protocols protect your data from any unauthorized access.</p>
+            </div>
+            <div class="feature-box">
+                <img src="icons/mind.gif" alt="User-Friendly" class="feature-icon">
+                <h3>User-Friendly</h3>
+                <p>Intuitive interface designed for easy navigation and accessibility.</p>
+            </div>
+        </div>
+            
+	<br></br>	
+    <footer class="footer">
+        <p>&copy; 2025 Destina 6. All rights reserved.</p>
+    </footer>    
+    <main>
+    </main>
+
+    <!-- Script -->
+    <script>
+        // Menangani tab klik dan menyembunyikan Recommended
+        const tabs = document.querySelectorAll(".tab");
+        const tabContents = document.querySelectorAll(".content");
+        const recommendedSection = document.getElementById("recommended");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                // Sembunyikan Recommended
+                recommendedSection.style.display = "none";
+
+                // Tampilkan hanya konten yang sesuai dengan tab yang diklik
+                const target = tab.getAttribute("data-target");
+                tabContents.forEach(content => {
+                    if (content.id === target) {
+                        content.style.display = "block";
+                    } else {
+                        content.style.display = "none";
+                    }
+                });
+            });
+        });
+
+        // Menampilkan Recommended kembali jika tab yang active di klik
+        window.addEventListener("load", () => {
+            const recommendedSection = document.getElementById("recommended");
+            const tabContents = document.querySelectorAll(".content");
+
+        // Tampilkan Recommended pertama kali saat halaman dimuat
+        recommendedSection.style.display = "block";
+        tabContents.forEach(content => content.style.display = "none");
+    });
+    </script>
+    <script src="tab.js"></script>
+	<script src="searchh.js"></script>
+	<script src="searchf.js"></script>
+	<script src="background-animation.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);    
+        })
+    </script>
+        <script>
+            // Function to get URL parameter 'tab'
+            function getUrlParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+    
+            // Cek apakah URL mengandung tab=flights
+            window.addEventListener("load", () => {
+                const tabParam = getUrlParameter("tab");
+                const recommendedSection = document.getElementById("recommended");
+                const tabs = document.querySelectorAll(".tab");
+                const tabContents = document.querySelectorAll(".content");
+                
+    
+                if (tabParam === "flights") {
+                    // Jika tab=destinations, jalankan skrip untuk menangani tab klik dan menyembunyikan Recommended
+                    recommendedSection.style.display = "none";
+                    tabs.forEach(tab => {
+                        tab.addEventListener("click", () => {
+                            // Sembunyikan Recommended
+                            recommendedSection.style.display = "none";
+    
+                            // Tampilkan hanya konten yang sesuai dengan tab yang diklik
+                            const target = tab.getAttribute("data-target");
+                            tabContents.forEach(content => {
+                                if (content.id === target) {
+                                    content.style.display = "block";
+                                } else {
+                                    content.style.display = "none";
+                                }
+                            });
+                        });
+                    });
+    
+                    // Tampilkan konten yang sesuai dengan tab yang aktif
+                    tabContents.forEach(content => {
+                        if (content.id === "flights") {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            });
+        </script>
+</body>
+</html>

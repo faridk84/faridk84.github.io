@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destina 6</title>
+    <link rel="icon" href="destina6.ico" type="image/x-icon">
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Hero section */
+        .hero {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        /* flight container */
+        .flight-container {
+            background-color: #f0f0f0; /* Light grey background for the container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center all child elements horizontally */
+        }
+
+        /* flight name centered */
+        #flight-name {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px; /* Add space below the flight name */
+        }
+
+        /* flight form */
+        .flight-form {
+            padding: 20px;
+            display: flex;
+            flex-direction: row; /* Arrange image and form side by side */
+            align-items: flex-start; /* Align items to the start */
+            gap: 100px; /* Space between image and form */
+            width: 90%;
+            justify-content: center;
+        }
+
+        .flight-form p {
+            color: black;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .flight-form h2 {
+            color: black;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        /* Left column (flight image) */
+        .flight-form img {
+            object-fit: cover;
+            width: 40%; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        /* Form and inputs */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack input elements vertically */
+            align-items: center;
+            gap: 10px; /* Space between the inputs */
+        }
+
+        /* Time inputs container */
+        .time-inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+        }
+
+        input[type="datetime-local"] {
+            width: 100%; /* Adjust width for two columns */
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* flight location */
+        #flight-location {
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Confirm button */
+        .confirm-booking-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .confirm-booking-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body id="animated-background">
+    <header>
+        <a href="home.html" class="logo">DESTINA 6</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="sign.html">Sign In</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <div class="flight-container">
+            <h2 id="flight-name">Airport Name</h2>
+            <div class="flight-form">
+                <img id="flight-image" src="" alt="flight Image">
+                <form>
+                    <label>Destination:</label><h2 id="flight-location">Airport Name</h2>
+                    <input class="form-control" type="datetime-local" placeholder="Select Start Time">
+                    <label>From:</label>
+                    <select name="airport" id="airport-dropdown">
+                        <option value="">Select an airport</option>
+                        <option value="Aceh - Bandara Sultan Iskandar Muda">Aceh - Bandara Sultan Iskandar Muda</option>
+                        <option value="Bali - Bandara Ngurah Rai">Bali - Bandara Ngurah Rai</option>
+                        <option value="Banten - Bandara Soekarno-Hatta">Banten - Bandara Soekarno-Hatta</option>
+                        <option value="Banten - Bandara Halim Perdanakusuma">Banten - Bandara Halim Perdanakusuma</option>
+                        <option value="Bengkulu - Bandara Fatmawati Soekarno">Bengkulu - Bandara Fatmawati Soekarno</option>
+                        <option value="Central Java - Bandara Ahmad Yani">Central Java - Bandara Ahmad Yani</option>
+                        <option value="Central Java - Bandara Adisucipto">Central Java - Bandara Adisucipto</option>
+                        <option value="Central Kalimantan - Bandara Tjilik Riwut">Central Kalimantan - Bandara Tjilik Riwut</option>
+                        <option value="East Java - Bandara Juanda">East Java - Bandara Juanda</option>
+                        <option value="East Kalimantan - Bandara Sepinggan">East Kalimantan - Bandara Sepinggan</option>
+                        <option value="East Nusa Tenggara - Bandara El Tari">East Nusa Tenggara - Bandara El Tari</option>
+                        <option value="Gorontalo - Bandara Jalaluddin">Gorontalo - Bandara Jalaluddin</option>
+                        <option value="Jakarta - Bandara Soekarno-Hatta">Jakarta - Bandara Soekarno-Hatta</option>
+                        <option value="Jakarta - Bandara Halim Perdanakusuma">Jakarta - Bandara Halim Perdanakusuma</option>
+                        <option value="Jambi - Bandara Sultan Thaha">Jambi - Bandara Sultan Thaha</option>
+                        <option value="Lampung - Bandara Raden Inten II">Lampung - Bandara Raden Inten II</option>
+                        <option value="Maluku - Bandara Pattimura">Maluku - Bandara Pattimura</option>
+                        <option value="North Kalimantan - Bandara International Aji Pangeran Tumenggung Pranoto">North Kalimantan - Bandara International Aji Pangeran Tumenggung Pranoto</option>
+                        <option value="North Maluku - Bandara Sultan Babullah">North Maluku - Bandara Sultan Babullah</option>
+                        <option value="North Sumatra - Bandara Kualanamu">North Sumatra - Bandara Kualanamu</option>
+                        <option value="North Sulawesi - Bandara Sam Ratulangi">North Sulawesi - Bandara Sam Ratulangi</option>
+                        <option value="North Sulawesi - Bandara Minahasa">North Sulawesi - Bandara Minahasa</option>
+                        <option value="Papua - Bandara Sentani">Papua - Bandara Sentani</option>
+                        <option value="Papua Barat - Bandara Domine Eduard Osok">Papua Barat - Bandara Domine Eduard Osok</option>
+                        <option value="Riau - Bandara Sultan Syarif Kasim II">Riau - Bandara Sultan Syarif Kasim II</option>
+                        <option value="Riau Islands - Bandara Hang Nadim">Riau Islands - Bandara Hang Nadim</option>
+                        <option value="South Kalimantan - Bandara Syamsudin Noor">South Kalimantan - Bandara Syamsudin Noor</option>
+                        <option value="South Sulawesi - Bandara Sultan Hasanuddin">South Sulawesi - Bandara Sultan Hasanuddin</option>
+                        <option value="South Sumatra - Bandara Sultan Mahmud Badaruddin II">South Sumatra - Bandara Sultan Mahmud Badaruddin II</option>
+                        <option value="Southeast Sulawesi - Bandara Haluoleo">Southeast Sulawesi - Bandara Haluoleo</option>
+                        <option value="West Java - Bandara Husein Sastranegara">West Java - Bandara Husein Sastranegara</option>
+                        <option value="West Kalimantan - Bandara Supadio">West Kalimantan - Bandara Supadio</option>
+                        <option value="West Nusa Tenggara - Bandara Lombok International">West Nusa Tenggara - Bandara Lombok International</option>
+                        <option value="West Papua - Bandara Mopah">West Papua - Bandara Mopah</option>
+                        <option value="West Sulawesi - Bandara Andi Depu">West Sulawesi - Bandara Andi Depu</option>
+                        <option value="West Sumatra - Bandara Minangkabau">West Sumatra - Bandara Minangkabau</option>
+                        <option value="Yogyakarta - Bandara Adisucipto">Yogyakarta - Bandara Adisucipto</option>
+                    </select>                   
+                        <!-- Dropdown for flight class -->
+                    <label for="class-dropdown">Select Class:</label>
+                    <select id="class-dropdown">
+                        <option value="">Select class</option>
+                        <option value="economy">Economy Class</option>
+                        <option value="business">Business Class</option>
+                        <option value="executive">Executive Class</option>
+                    </select>
+
+                    <!-- Display Price Result -->
+                    <p id="flight-price">Price:</p><div id="price-result" class="result"></div>
+                    <button class="confirm-booking-btn" type="button">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br></br>	
+    <footer class="footer">
+        <p>&copy; 2025 Destina 6. All rights reserved.</p>
+    </footer>  
+    <script src="tab.js"></script>
+    <script src="searchh.js"></script>
+    <script src="searchf.js"></script>
+    <script src="background-animation.js"></script>
+
+    <script type="text/javascript">
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                name: urlParams.get('data-name'),
+                img: urlParams.get('img'),
+                location: urlParams.get('location')
+            };
+        }
+
+        // Display flight data based on URL parameters
+        function displayflightDetails() {
+            const params = getQueryParams();
+            if (params.name && params.img && params.location) {
+                document.getElementById('flight-name').textContent = params.name;
+                document.getElementById('flight-image').src = params.img;
+                document.getElementById('flight-location').textContent = params.name+" "+params.location;
+            } else {
+                document.getElementById('flight-name').textContent = "flight not found.";
+            }
+        }
+
+        // Call the function to display the flight details
+        displayflightDetails();
+
+        // Sticky header on scroll
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);    
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        config = {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        }
+        flatpickr("input[type=datetime-local]", {}); 
+    </script> 
+    <script>
+    // Function to dynamically load a script
+    function loadScript(scriptName) {
+        const script = document.createElement('script');
+        script.src = `js/${scriptName}.js`;
+        script.type = 'text/javascript';
+        document.head.appendChild(script);
+    }
+
+    // Get the 'airport' URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const airport = urlParams.get('data-name'); // Example: ?airport=ngurah
+
+    // Dynamically load the script based on the 'airport' parameter
+    if (airport) {
+        switch (airport) {
+            case 'Bandara Ngurah Rai':
+                loadScript('ngurah');
+                break;
+            case 'Bandara Halim Perdanakusuma':
+                loadScript('halim');
+                break;
+            case 'Bandara Kertajati':
+                loadScript('kertajati');
+                break;
+            case 'Bandara Nusawiru':
+                loadScript('nusawiru');
+                break;
+            case 'Bandara Soekarno Hatta':
+                loadScript('soehat');
+                break;
+            case 'Bandara Wiriadinata':
+                loadScript('wiriadinata');
+                break;
+            default:
+                console.log('Unknown airport');
+                break;
+        }
+    }
+    </script>
+</body>
+</html>

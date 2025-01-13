@@ -1,0 +1,4 @@
+Banyak fitur dan tombol, dimulai loading dari index.html.
+Untuk fitur login 
+username: admin 
+password: admin

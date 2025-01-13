@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Destina 6 SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="acc.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+<body>
+	<div class="main-w3layouts wrapper">
+		<h1><strong>Destina 6 SignUp Form</strong></h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form method="post" onsubmit="return showAlert()">
+					<input class="text" type="text" name="Username" placeholder="Username" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+					<div class="wthree-text">
+							<input type="checkbox" id="myCheckbox" required="">
+							<label for="myCheckbox">I Agree To The Terms & Conditions</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Already have an Account? <a href="sign.html"> Login Now!</a></p>
+			</div>
+		</div>
+		<div class="destina6copy-agile">
+			<p>© 2025 Destina 6 Signup Form. All rights reserved | Design by <a href="https://id.linkedin.com/in/farid-kurniatama-8894bb1ba" target="_blank">Destina 6</a></p>
+		</div>
+		<ul class="destina6-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<script>
+        function showAlert() {
+            event.preventDefault();
+            var checkbox = document.getElementById('myCheckbox');
+            if (checkbox.checked) {
+                alert("Kode verifikasi telah dikirimkan ke email.");
+                return true; 
+            } else {
+                alert("Harap setujui syarat dan ketentuan.");
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destina 6</title>
+    <link rel="icon" href="destina6.ico" type="image/x-icon">
+    <link rel="stylesheet" href="gaya.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Hero section */
+        .hero {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        /* destination container */
+        .destination-container {
+            background-color: #f0f0f0; /* Light grey background for the container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center all child elements horizontally */
+        }
+
+        /* destination name centered */
+        #destination-name {
+            font-size: 2em;
+            color: #000000;
+            margin-bottom: 20px; /* Add space below the destination name */
+        }
+
+        /* destination form */
+        .destination-form {
+            padding: 20px;
+            display: flex;
+            flex-direction: row; /* Arrange image and form side by side */
+            align-items: flex-start; /* Align items to the start */
+            gap: 100px; /* Space between image and form */
+            width: 100%;
+            justify-content: center;
+        }
+
+        .destination-form p {
+            color: black;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        /* Left column (destination image) */
+        .destination-form img {
+            object-fit: cover;
+            width: 50%; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        /* Form and inputs */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack input elements vertically */
+            align-items: center;
+            gap: 10px; /* Space between the inputs */
+        }
+
+        /* Time inputs container */
+        .time-inputs {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+        }
+
+        input[type="datetime-local"] {
+            width: 48%; /* Adjust width for two columns */
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        /* destination location */
+        #destination-location {
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* description */
+        #destination-description {
+            font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+            font-size: 16px;
+            color: #000000;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            text-align: justify; /* Justify the text */
+        }
+
+        /* Confirm button */
+        .confirm-booking-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .confirm-booking-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    </style>
+</head>
+<body id="animated-background">
+    <header>
+        <a href="home.html" class="logo">DESTINA 6</a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="sign.html">Sign In</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <div class="destination-container">
+            <h2 id="destination-name">destination Name</h2>
+            <div class="destination-form">
+                <img id="destination-image" src="" alt="destination Image">
+                <form>
+                    <div id="destination-description">Destination description will appear here.</div> <!-- Added description section -->
+                    <p id="destination-location">Location</p>
+                    <button class="confirm-booking-btn" type="button" onclick="openHomeWithActiveTab()">Search For Tickets</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br></br>    
+    <footer class="footer">
+        <p>&copy; 2025 Destina 6. All rights reserved.</p>
+    </footer>  
+    <script src="tab.js"></script>
+    <script src="searchh.js"></script>
+    <script src="searchf.js"></script>
+    <script src="background-animation.js"></script>
+
+    <script type="text/javascript">
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                name: urlParams.get('data-name'),
+                img: urlParams.get('img'),
+                location: urlParams.get('location'),
+                description: urlParams.get('description') // Added description parameter
+            };
+        }
+
+        // Display destination data based on URL parameters
+        function displaydestinationDetails() {
+            const params = getQueryParams();
+            if (params.name && params.img && params.location && params.description) {
+                document.getElementById('destination-name').textContent = params.name;
+                document.getElementById('destination-image').src = params.img;
+                document.getElementById('destination-location').textContent = "Location: " + params.location;
+                document.getElementById('destination-description').textContent = params.description; // Display description
+            } else {
+                document.getElementById('destination-name').textContent = "destination not found.";
+            }
+        }
+
+        // Call the function to display the destination details
+        displaydestinationDetails();
+
+        // Sticky header on scroll
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);    
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        config = {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        }
+        flatpickr("input[type=datetime-local]", {}); 
+    </script>
+    <script type="text/javascript">
+        function openHomeWithActiveTab() {
+            // Add the active class to the "flights" tab
+            // Redirect to home.html with a query parameter to indicate the active tab
+            window.location.href = "home.html?tab=flights";
+        }
+    </script>
+</body>
+</html>
